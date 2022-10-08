@@ -11,11 +11,15 @@ public class TipCalculator {
     public double getTotalBeforeTip(){ //getter
         return totalBeforeTip;
     }
-    public double getTipPercentage(){ //getter
-        return tipPercentage;
+    public int getTipPercentage(){ //getter
+        return (int)tipPercentage*100;
     }
     public void addMeal(double cost){ //adds cost to total bill
-        totalBeforeTip += cost;
+        double addCost = cost;
+        if (cost == -1){
+            addCost = 0;
+        }
+        totalBeforeTip += addCost;
     }
     public double tipAmount(){ //returns tip only
         return tipPercentage*totalBeforeTip;

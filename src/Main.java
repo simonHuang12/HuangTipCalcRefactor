@@ -16,11 +16,12 @@ public class Main
             hunrgy.addMeal(mealCost);
         }
         System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
-        System.out.println("Total Bill Before Tip: "+ hunrgy.getTotalBeforeTip());
+        System.out.printf("Total Bill Before Tip: $%.2f\n", hunrgy.getTotalBeforeTip());
         System.out.println("Tip Percentage: "+hunrgy.getTipPercentage());
-        System.out.println("Total Tip: "+hunrgy.tipAmount());
-        System.out.println("Total Bill Before Tip: "+ hunrgy.getTotalBeforeTip());
-        System.out.println("Per Person Cost Before Tip: "+hunrgy.getTotalBeforeTip());
-        System.out.println("Total Cost Per Person: "+hunrgy.perPersonTotalCost());
+        System.out.printf("Total Tip: $%.2f\n", hunrgy.tipAmount());
+        System.out.printf("Total Bill With Tip: $%.2f\n", hunrgy.totalBill());
+        System.out.printf("Per Person Cost Before Tip: $%.2f\n", hunrgy.getTotalBeforeTip());
+        System.out.printf("Tip Per Person: $%.2f\n", hunrgy.perPersonTipAmount());
+        System.out.printf("Total Cost Per Person: $%.2f\n", hunrgy.perPersonTotalCost());
     }
 }
